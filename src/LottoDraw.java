@@ -1,17 +1,17 @@
 public class LottoDraw {
     public static void main(String[] args) {
 
-        // Step 1: 生成 1 到 40 之间的彩票号码
+        // Step 1: generate 40 lottery numbers
         StrLinkedList lotteryNumbers = StrLinkedList.generateLotteryNumbers();
-        System.out.print("彩票号码lottery numbers：");
-        lotteryNumbers.print();  // 打印所有 40 个彩票号码
+        System.out.print("lottery numbers：");
+        lotteryNumbers.print(); 
 
-        // Step 2: 从中随机选择 6 个中奖号码
+        // Step 2: choose 6 winning numbers
         StrLinkedList winningNumbers = StrLinkedList.pickWinningNumbers(lotteryNumbers);
-        System.out.print("中奖号码：");
-        winningNumbers.print();  // 打印 6 个中奖号码
+        System.out.print("win number：");
+        winningNumbers.print();  // winning numbers
 
-        // Step 3: 生成 100 张彩票并计算总奖池
+        // Step 3: simulate 100 tickets
         //100 tickets
         double totalPrizePool = 0.0;
         double totalSales = 0.0;
@@ -26,8 +26,8 @@ public class LottoDraw {
 
         // Step 4: 计算并显示总销售额和利润
         double profit = totalSales - totalPrizePool;
-        System.out.println("\n100 张彩票的总销售额：" + totalSales);
-        System.out.println("总奖池totalPrizePool：" + totalPrizePool);
-        System.out.println("筹款利润fundraising profit：" + profit);
+        System.out.println("\n100 Lotto Total sales：" + totalSales);
+        System.out.println("total Prize Pool：" + totalPrizePool);
+        System.out.println("fundraising profit：" + profit);
     }
 }
